@@ -4,80 +4,164 @@
       "tag": "greeting",
       "patterns": [
         "Hi",
-        "Hey",
-        "How are you",
-        "Is anyone there?",
         "Hello",
-        "Good day"
+        "Hey",
+        "Good morning",
+        "Good evening",
+        "How are you?",
+        "Is anyone there?",
+        "Greetings!"
       ],
       "responses": [
-        "Hey :-)",
-        "Hello, thanks for visiting",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
+        "Hello! Welcome to Siliguri Institute of Technology's chatbot. How can I assist you today?",
+        "Hi there! How can I help you? Feel free to ask anything about Siliguri Institute of Technology.",
+        "Hey! I'm here to provide information about Siliguri Institute of Technology. What would you like to know?",
+        "Greetings! What can I do for you today?"
       ]
     },
     {
       "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "Thanks, bye",
+        "I need to go now",
+        "Catch you later"
+      ],
       "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
+        "Goodbye! Have a great day!",
+        "See you later! Feel free to reach out if you need further assistance.",
+        "Thanks for visiting! Come back anytime. Take care!",
+        "Catch you later! Let me know if you have more questions in the future."
       ]
     },
     {
       "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
-    },
-    {
-      "tag": "items",
       "patterns": [
-        "Which items do you have?",
-        "What kinds of items are there?",
-        "What do you sell?"
+        "Thanks",
+        "Thank you",
+        "That was helpful",
+        "Thanks a lot",
+        "I appreciate your help",
+        "You are very helpful"
       ],
       "responses": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
+        "You're welcome! I'm glad to assist you.",
+        "Happy to help! If you have more questions, just let me know.",
+        "Anytime! Don't hesitate to reach out for more information.",
+        "I appreciate your kind words! Let me know how else I can help."
       ]
     },
     {
-      "tag": "payments",
+      "tag": "courses_offered",
       "patterns": [
-        "Do you take credit cards?",
-        "Do you accept Mastercard?",
-        "Can I pay with Paypal?",
-        "Are you cash only?"
+        "What courses are available?",
+        "What programs does SIT offer?",
+        "Tell me about SIT courses",
+        "What degrees can I pursue at SIT?",
+        "Are there online courses available?",
+        "What is the course duration for B.Tech?"
       ],
       "responses": [
-        "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
+        "SIT offers undergraduate, postgraduate, and diploma programs. \nUndergraduate: B.Tech (CSE, IT, ECE, EE, CE, AI & ML), BCA, BBA, BBA-HM, B.Sc (Cyber Security, Computer Science, Psychology), and HMCT. \nPostgraduate: MBA and MCA. \nDiploma: CST, ETCE, CE, EE. \nCurrently, we don't provide online courses, but you can check for updates!",
+        "At SIT, you can pursue various courses including B.Tech in multiple streams, BCA, MBA, and others. Course duration for B.Tech is typically 4 years."
       ]
     },
     {
-      "tag": "delivery",
+      "tag": "departments",
       "patterns": [
-        "How long does delivery take?",
-        "How long does shipping take?",
-        "When do I get my delivery?"
+        "What departments are there at SIT?",
+        "Tell me about the academic departments",
+        "Which faculties does SIT have?",
+        "How many departments are there?",
+        "What is the best department to study Computer Science?"
       ],
       "responses": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
+        "SIT has various departments including Computer Science & Engineering, Information Technology, Electronics & Communication Engineering, Electrical Engineering, Civil Engineering, Business Administration, Computer Application, and Hotel Management. \nThe Computer Science department is known for its excellent faculty and resources.",
+        "We have a total of eight major departments, offering specialized programs that cater to different interests and career paths."
       ]
     },
     {
-      "tag": "funny",
+      "tag": "facilities",
       "patterns": [
-        "Tell me a joke!",
-        "Tell me something funny!",
-        "Do you know a joke?"
+        "What facilities are available at SIT?",
+        "Tell me about the campus facilities",
+        "What amenities does SIT provide?",
+        "Is there a gym on campus?",
+        "Are there any recreational facilities?"
       ],
       "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
+        "SIT provides a Central Library, hostel accommodation, transportation services, internet & computing resources, banking services, medical facilities, and a cafeteria. \nAdditionally, we have sports facilities including a gym, playgrounds, and areas for various recreational activities.",
+        "Yes, we have a fully equipped gym and other recreational facilities to ensure a well-rounded campus experience."
+      ]
+    },
+    {
+      "tag": "placement",
+      "patterns": [
+        "What are the placement opportunities at SIT?",
+        "Does SIT offer job placements?",
+        "Which companies visit SIT for placements?",
+        "What is the highest salary package offered during placements?",
+        "Do you have a placement cell?"
+      ],
+      "responses": [
+        "SIT has a strong placement cell that works diligently to connect students with potential employers. Companies like Microsoft, Intel, Amazon, Accenture, TCS, and Capgemini actively recruit our students. \nThe highest salary package offered recently was around INR X lakh per annum.",
+        "Yes, we do have a dedicated placement cell that assists students in getting placed with leading companies."
+      ]
+    },
+    {
+      "tag": "contact_info",
+      "patterns": [
+        "How can I contact SIT?",
+        "What is the SIT contact number?",
+        "Where is SIT located?",
+        "Do you have a website?",
+        "What are the hours of operation?"
+      ],
+      "responses": [
+        "Siliguri Institute of Technology is located at Salbari, Hill Cart Road, P.O. Sukna, District Darjeeling, West Bengal - 734009, India. \nPhone: 0353-2778002 / 2778004 \nEmail: info@sittechno.org. \nYou can also visit our website at www.sittechno.org for more information.",
+        "Our hours of operation are from 9 AM to 5 PM, Monday to Friday. Don't hesitate to reach out anytime!"
+      ]
+    },
+    {
+      "tag": "admission_process",
+      "patterns": [
+        "How do I apply to SIT?",
+        "What is the admission process?",
+        "How can I get admission to SIT?",
+        "What are the eligibility criteria?",
+        "Is there an entrance exam for B.Tech?"
+      ],
+      "responses": [
+        "Admissions at SIT are based on entrance exams and eligibility criteria. For details regarding the entrance exams and the application process, contact +91-9434527272 / +91-7477660427. \nThe eligibility criteria vary by program, so please inquire for specific details.",
+        "Yes, for B.Tech, an entrance exam is required. Make sure to check for the latest updates regarding the exam schedule."
+      ]
+    },
+    {
+      "tag": "scholarships",
+      "patterns": [
+        "Are there any scholarships available?",
+        "How can I apply for a scholarship?",
+        "What types of scholarships does SIT offer?",
+        "Do you have financial aid options?"
+      ],
+      "responses": [
+        "Yes, SIT offers various scholarships based on merit and need. To apply, please visit our website or contact the financial aid office for detailed information.",
+        "We provide scholarships for outstanding students and financial aid options for those in need. Check our website for more information!"
+      ]
+    },
+    {
+      "tag": "student_life",
+      "patterns": [
+        "What is student life like at SIT?",
+        "Are there clubs and organizations?",
+        "Do you have extracurricular activities?",
+        "How can I get involved in campus activities?"
+      ],
+      "responses": [
+        "Student life at SIT is vibrant and engaging. There are numerous clubs and organizations focused on academics, culture, sports, and social initiatives. Extracurricular activities are encouraged for a holistic development experience.",
+        "You can get involved by joining one of the many student organizations or participating in campus events. Check our announcements for upcoming activities!"
       ]
     }
   ]
