@@ -1,3 +1,4 @@
+from os import getenv
 import mysql.connector
 from mysql.connector import Error
 
@@ -40,10 +41,18 @@ def insert_query(connection, query, answer):
     connection.commit()
     return cursor.lastrowid
 
+db_host = getenv("DB_HOST","localhost")
+db_user = getenv("DB_USER","root")
+db_pass = getenv("DB_PASS","tuhin2003@#")
+db_name = getenv("DB_NAME","chatbot")
+def get_connection():
+    return create_connection(db_host, db_user, db_pass, db_name)
+
 def main():
-    connection = create_connection("localhost", "root", "tuhin2003@#", "chatbot")
+    connection = get_connection()
     if connection is not None:
         create_table(connection)
+        connection.close()
     else:
         print("Error! Cannot create the database connection.")
 

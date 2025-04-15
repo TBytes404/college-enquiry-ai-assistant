@@ -1,5 +1,5 @@
 class Chatbox {
-    constructor() {
+    constructor(url) {
         this.args = {
             openButton: document.querySelector('.chatbox__button'),
             chatBox: document.querySelector('.chatbox__support'),
@@ -7,6 +7,7 @@ class Chatbox {
             micButton: document.querySelector('.mic__button')
         }
 
+        this.url=url
         this.state = false;
         this.messages = [];
         this.recognition = null;
@@ -70,7 +71,7 @@ class Chatbox {
         let msg1 = { name: "User", message: text1 };
         this.messages.push(msg1);
 
-        fetch('http://127.0.0.1:5000/predict', {
+        fetch(this.url, {
             method: 'POST',
             body: JSON.stringify({ message: text1 }),
             mode: 'cors',
@@ -121,5 +122,5 @@ class Chatbox {
     }
 }
 
-const chatbox = new Chatbox();
+const chatbox = new Chatbox('http://127.0.0.1:8000/predict');
 chatbox.display();

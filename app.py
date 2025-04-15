@@ -5,7 +5,7 @@ import torch
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
 import numpy as np
-from database import create_connection, insert_query
+from database import get_connection, insert_query
 import random
 
 app = Flask(__name__)
@@ -56,7 +56,7 @@ def predict():
     response = get_response(message)
 
     # Store the question and response in the database
-    connection = create_connection("localhost", "root", "tuhin2003@#", "chatbot")
+    connection = get_connection()
     if connection is not None:
         insert_query(connection, message, response)
         connection.close()
@@ -64,4 +64,4 @@ def predict():
     return jsonify({"answer": response})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port=8000,debug=True)
