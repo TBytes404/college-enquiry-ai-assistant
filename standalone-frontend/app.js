@@ -4,7 +4,9 @@ class Chatbox {
             openButton: document.querySelector('.chatbox__button'),
             chatBox: document.querySelector('.chatbox__support'),
             sendButton: document.querySelector('.send__button'),
-            micButton: document.querySelector('.mic__button')
+            micButton: document.querySelector('.mic__button'),
+            video: document.querySelector('.chatbox__button>video'),
+            input: document.querySelector('.chatbox__footer>input')
         }
 
         this.url=url
@@ -56,6 +58,7 @@ class Chatbox {
         // show or hides the box
         if(this.state) {
             chatbox.classList.add('chatbox--active');
+            this.args.input.focus()
         } else {
             chatbox.classList.remove('chatbox--active');
         }
@@ -81,6 +84,14 @@ class Chatbox {
           })
           .then(r => r.json())
           .then(r => {
+            // read aloud message
+            if ('speechSynthesis' in window) {
+            const msg = new SpeechSynthesisUtterance(r.answer);
+            msg.onstart = () => this.args.video.play();
+            msg.onend = () => this.args.video.pause();
+            window.speechSynthesis.speak(msg);
+        }
+
             let msg2 = { name: "Sam", message: r.answer };
             this.messages.push(msg2);
             this.updateChatText(chatbox);
